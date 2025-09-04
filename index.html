@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <title>تحميل تطبيق لجنة النزاهة</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -18,43 +17,25 @@
       margin: 0 auto 20px;
       display: block;
     }
-    #android-icon {
-      width: 100px;
-      vertical-align: middle;
-      margin-left: 12px;
-    }
-    #qrcode {
-      margin: 20px auto;
-      width: 180px;
-      height: 180px;
-    }
     h1 {
       color: #333;
-    }
-    .app-info {
-      margin: 20px auto 40px;
-      max-width: 400px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-      padding: 20px;
-      text-align: right;
-      font-size: 16px;
-      color: #444;
-    }
-    a.download-button {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 15px 30px;
-      background-color: #28a745;
-      color: white;
-      text-decoration: none;
       font-size: 20px;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
+      margin-bottom: 20px;
     }
-    a.download-button:hover {
-      background-color: #1e7e34;
+    .download-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .download-buttons a img {
+      width: 150px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .download-buttons a img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -63,40 +44,21 @@
   <!-- شعار اللجنة -->
   <img id="logo" src="logo.png" alt="شعار لجنة النزاهة" />
 
-  <h1>
-    تحميل تطبيق لجنة النزاهة للأندرويد
-    <img id="android-icon" src="ims.png" alt="رمز الأندرويد" />
-  </h1>
+  <!-- العبارة -->
+  <h1>قم بتحميل تطبيق لجنة النزاهة الآن لتقديم البلاغات ومتابعة الشكاوى بسهولة وشفافية</h1>
 
-  <div class="app-info">
-    <p><strong>اسم التطبيق:</strong> لجنة النزاهة</p>
-    <p>تطبيق حكومي يهدف إلى تمكين المواطنين من الإبلاغ عن حالات الفساد ومتابعة الشكاوى بسهولة وشفافية.</p>
-    <p><strong>رقم الإصدار:</strong> 1.0.0</p>
-    <p>12 ميجابايت</p>
-    <p>محافظة ميسان - لجنة النزاهة</p>
+  <!-- أيقونات التحميل -->
+  <div class="download-buttons">
+    <!-- Google Play -->
+    <a href="https://www.dropbox.com/scl/fi/2x8w8ir373b1dptqsgpb7/app-release.apk?rlkey=cthkif1ur62bx18476gmcbgh5&st=0f0rwemb&dl=0" target="_blank" rel="noopener noreferrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="تحميل من Google Play" />
+    </a>
+
+    <!-- App Store -->
+    <a href="https://apps.apple.com/iq/app/nazaha-maysan/id6751606558" target="_blank" rel="noopener noreferrer">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="تحميل من App Store" />
+    </a>
   </div>
-
-  <p>امسح الباركود أو اضغط على الزر لتحميل التطبيق مباشرة:</p>
-
-  <div id="qrcode"></div>
-
-  <a href="https://www.dropbox.com/scl/fi/jk56p7s63ir92vi0qv8yv/app-release.apk?rlkey=dxxr6xc4l7b2i0hnplxr9spmt&st=pvljt7bt&dl=1"
-     class="download-button"
-     target="_blank"
-     rel="noopener noreferrer">
-    تحميل التطبيق الآن
-  </a>
-
-  <script>
-    new QRCode(document.getElementById("qrcode"), {
-      text: "https://www.dropbox.com/scl/fi/jk56p7s63ir92vi0qv8yv/app-release.apk?rlkey=dxxr6xc4l7b2i0hnplxr9spmt&st=pvljt7bt&dl=1",
-      width: 180,
-      height: 180,
-      colorDark: "#000000",
-      colorLight: "#ffffff",
-      correctLevel: QRCode.CorrectLevel.H
-    });
-  </script>
 
 </body>
 </html>
